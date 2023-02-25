@@ -60,14 +60,14 @@ require_once (realpath(dirname(__FILE__).'/../../../../../../../..').'/NicerAppW
 
 			delete na.apps.loaded['app.2D.cardgame.tarot'];
 			na.m.waitForCondition (
-				'na.apps.loaded["app.2D.cardgame.tarot"]',
+				'na.apps.loaded["/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot"]',
 				function () {
                     ///debugger;
 					return (
 						typeof na === 'object'
 						&& typeof na.apps === 'object'
 						&& typeof na.apps.loaded === 'object'
-						&& typeof na.apps.loaded['app.2D.cardgame.tarot'] === 'object'
+						&& typeof na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot'] === 'object'
 					);
 				},
 				function () {
@@ -123,6 +123,7 @@ require_once (realpath(dirname(__FILE__).'/../../../../../../../..').'/NicerAppW
 		<div id="intro" class="text" style="display:none;">
 			<h1 class="blessedtarot_cardExplanation" id="pageTitle" style="text-shadow:2px 2px 1px rgba(0,0,0,0.7)">Free Tarot Reading (191 decks, 9 reading types)</h1>
 			<script type="text/javascript">
+			/*
                 setTimeout(function() {
                     var vividTextCmd = {
                         el : jQuery('#pageTitle')[0],
@@ -132,6 +133,7 @@ require_once (realpath(dirname(__FILE__).'/../../../../../../../..').'/NicerAppW
                     };
                     na.vividText.initElement (vividTextCmd);	   
                 }, 1000);
+			*/
 			</script>
 
 			

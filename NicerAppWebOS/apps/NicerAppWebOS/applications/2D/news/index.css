@@ -1,6 +1,7 @@
 .newsApp_header {
     color : white;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+    font-size : 1rem;
 }
 
 #newsApp_content {
@@ -293,14 +294,14 @@
 
 .newsApp__header__datetime {
     color : #EEE;
-    font-size : 70%;
+    font-size : 0.7rem;
 }
 
 .newsApp__header__displayCounts {
     color : lime;
 }
 
-#newsApp_title, #newsApp_info, #newsApp_timer {
+#newsApp_title, #newsApp_timer {
     padding : 7px !important;
     margin : 5px !important;
     border-radius : 10px !important;

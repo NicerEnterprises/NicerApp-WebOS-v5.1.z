@@ -150,7 +150,7 @@ Options +FollowSymLinks
     RewriteRule ^$ NicerAppWebOS/index.php?viewID=/ [L]
 
     RewriteCond %{REQUEST_METHOD} ^(GET)$
-    RewriteRule ^nc$ NicerAppWebOS/index.php?nvt=y&lc=n&viewID=/ [L]
+    RewriteRule ^nc$ NicerAppWebOS/index.php?uvt=n&lc=n&viewID=/ [L]
 
 
 

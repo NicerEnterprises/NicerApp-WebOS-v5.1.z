@@ -69,6 +69,7 @@ function t2_getDecksFromFilesystem() {
 	foreach ($p as $idx => $path) {
 		$path = str_replace('C:\data1\htdocs\localhost\nicerapp\apps\nicerapp\/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot\appContent\tarotSite\decks\\', '', $path);
 		$p[$idx] = $path;
+		$path = str_replace('/back2.jpg','',$path);
 		$path = str_replace('/back.jpg','',$path);
 		$path = str_replace('/back.png','',$path);
 		//var_dump($path);exit();
@@ -129,15 +130,30 @@ function t2_getDecks() {
 	}
 	
 	global $decks;
-	//var_dump ($decks); die();
+	//echo '<pre>'; var_dump ($decks); die();
 
 	return $decks;
 }
 
 function t2_getNumberOfDecks() {
 	$decks = t2_getDecks();
-	return t2_getNumberOfDecks_recurse($decks);
+	//return t2_getNumberOfDecks_recurse($decks);
+	$c = 0;
+	count_elt ($decks, $c);
+	return $c;
 }
+
+
+function count_elt($array, &$count=0){
+  if (count($array)===0) ++$count;
+  foreach($array as $v) if(is_array($v)) count_elt($v,$count); else ++$count;
+  return $count;
+}
+
+
+
+
+
 
 function t2_getNumberOfDecks_recurse ($d) {
 	$r = 0;
@@ -150,6 +166,7 @@ function t2_getNumberOfDecks_recurse ($d) {
 			}
 		}
 	}
+
 	return $r;
 }
 

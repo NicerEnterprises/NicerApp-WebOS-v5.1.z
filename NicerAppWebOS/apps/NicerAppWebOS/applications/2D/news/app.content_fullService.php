@@ -28,6 +28,7 @@ $pageTitle = str_replace('_', '&nbsp;', $pageTitle);
                         $('#div_newsApp_info, .newsApp__header__datetime').css({display:'none'});
                     }, 200);
                 } else {
+                    /*
                     setTimeout(function() {
                         var vividTextCmd = {
                                 el : jQuery('#newsApp_info')[0],
@@ -37,6 +38,7 @@ $pageTitle = str_replace('_', '&nbsp;', $pageTitle);
                         };
                         na.vividText.initElement (vividTextCmd);
                     }, 500);
+                    */
                 }
                 </script>                
         <script type="text/javascript" src="/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/news/news_siteContent.source.js?changed=<?php echo $naWebOS->fileDateTimeStamp(dirname(__FILE__).'/news_siteContent.source.js');?>"></script>
@@ -45,7 +47,7 @@ $pageTitle = str_replace('_', '&nbsp;', $pageTitle);
             <div id="siteContent__header" class="saHeaderInDialog" style="display:none;flex-direction:column;width:100%;">
                 <div class="content_containerDiv_container evenly">
                     <div class="content_containerDiv_item" style="order:1;">
-                        <h1 id="newsApp_title" class="newsApp_header" style="padding:0px;margin:0px;vertical-align:middle;"><?php echo $pageTitle;?></h1>
+                        <h1 id="newsApp_title" class="newsApp_header backdropped" style="padding:0px;margin:0px;vertical-align:middle;"><?php echo $pageTitle;?></h1>
                     </div>
                     <div id="div_newsApp_searchbar" class="content_containerDiv_item backdropped" style="order:2;display:none;">
                         <label for="newsApp_searchbar" id="label_newsApp_searchbar" class="label_newsApp" style="font-size:120%;font-weight:bold;padding:5px;">Search for : </label>
@@ -53,8 +55,8 @@ $pageTitle = str_replace('_', '&nbsp;', $pageTitle);
                         <img id="newsApp_searchbar__enterQuery" title="search the entire news database (up to 14 days into the past)" src="/NicerAppWebOS/siteMedia/na.question-mark.svg.png" style="height:30px;vertical-align:middle" onclick="na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/news'].onSearch(event)"/>
                         <img id="newsApp_searchbar__abandonQuery" title="abandon the current search query and display the very latest news again" src="/NicerAppWebOS/siteMedia/na.reset.png" style="height:30px;vertical-align:middle" onclick="na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/news'].clearSearch(event)"/>
                     </div>
-                    <div id="div_newsApp_info" class="content_containerDiv_item" style="order:2;">
-                        <span id="newsApp_info" class="backdropped">This app will load up older news-items whenever needed</span>
+                    <div id="div_newsApp_info" class="content_containerDiv_item backdropped" style="order:2;">
+                        <span id="newsApp_info" class="contentSectionTitle1_span">This app will load up older news-items whenever needed</span>
                     </div>
                     <div class="content_containerDiv_item" style="order:3;">
                         <span id="newsApp_timer" class="backdropped newsApp_header" style="font-weight:bold;"></span>                    

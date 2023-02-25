@@ -16,7 +16,7 @@
             <canvas id="saCompanyLogo" width="125" height="125" onclick="event.data={element:'saCompanyLogo'}; na.logo.settings.stage.removeAllChildren(); na.logo.init_do_createLogo('saCompanyLogo','countryOfOriginColors');"></canvas>
         </div>
         <div>
-            <h1 class="contentSectionTitle1" style="font-family:Krona One;"><span class="contentSectionTitle1_span">NicerApp WebOS</span></h1>
+            <h1 class="contentSectionTitle1"><span class="contentSectionTitle1_span">NicerApp WebOS</span></h1>
         </div>
     </div>
 

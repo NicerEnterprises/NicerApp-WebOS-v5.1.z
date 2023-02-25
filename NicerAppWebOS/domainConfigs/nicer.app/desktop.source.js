@@ -225,7 +225,6 @@ na.desktop = {
     
     resize : function (callback, animate, reset) {
         na.d.s.animating = true;
-        debugger;
         if (reset === undefined) reset = true;
         var anims = na.d.calculateWhichTopIconsToShow();
         if (animate===null) animate = anims;
