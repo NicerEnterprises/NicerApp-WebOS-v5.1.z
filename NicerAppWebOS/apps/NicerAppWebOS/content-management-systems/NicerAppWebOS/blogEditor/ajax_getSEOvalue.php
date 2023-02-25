@@ -52,12 +52,12 @@ if (
             //if (property_exists($vs,'SEO_value')) $r = $vs->SEO_value;
         }*/
         if (property_exists($call2->body,'SEO_value')) $r = $call2->body->SEO_value;
-        if (is_null($r)) $r = $call2->body->dataID;
+        if ((!isset($r) || is_null($r)) && property_exists($call2->body, 'dataID')) $r = $call2->body->dataID;
 
     } elseif (count($call->body->docs)>1) {
         $msg = $fncn.' : multiple views for viewID='.$_GET['viewID'].' were found. using only the first.';
-        trigger_error($msg, E_USER_WARNING);
-        echo $msg;
+        //trigger_error($msg, E_USER_WARNING);
+        //echo $msg;
         error_log($msg);
 
         $call = $cdb->get ($call->body->docs[0]['_id']);

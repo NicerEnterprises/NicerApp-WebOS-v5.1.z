@@ -626,21 +626,23 @@ class NicerAppWebOS {
 
                 foreach ($view as $viewsFolder => $viewSettings) {
                     $rootPath = str_replace('/NicerAppWebOS','',$rootPath_na);
-                    $files = getFilePathList ($rootPath.'/'.$viewsFolder, true, '/app.*/', null, array('file'), 1);
-                    //if ($debug)
-                    //{ var_dump ($rootPath.'/'.$viewsFolder); echo '<pre style="color:yellow;background:red;">'; var_dump ($files); echo '</pre>'.PHP_EOL.PHP_EOL;  };
+                    if (file_exists($rootPath.'/'.$viewsFolder)) {
+                        $files = getFilePathList ($rootPath.'/'.$viewsFolder, true, '/app.*/', null, array('file'), 1);
+                        //if ($debug)
+                        //{ var_dump ($rootPath.'/'.$viewsFolder); echo '<pre style="color:yellow;background:red;">'; var_dump ($files); echo '</pre>'.PHP_EOL.PHP_EOL;  };
 
-                    $titleFile = $rootPath.'/'.$viewsFolder.'/app.title.site.php';
-                    $ret = [];
-                    foreach ($files as $idx3 => $contentFile) {
-                        if (strpos($contentFile, 'app.dialog.')!==false) {
-                            $divID = str_replace('app.dialog.', '', basename($contentFile));
-                            $divID = str_replace('.php', '', $divID);
-                            $ret[$divID] = execPHP ($contentFile);
+                        $titleFile = $rootPath.'/'.$viewsFolder.'/app.title.site.php';
+                        $ret = [];
+                        foreach ($files as $idx3 => $contentFile) {
+                            if (strpos($contentFile, 'app.dialog.')!==false) {
+                                $divID = str_replace('app.dialog.', '', basename($contentFile));
+                                $divID = str_replace('.php', '', $divID);
+                                $ret[$divID] = execPHP ($contentFile);
+                            }
                         }
+                        //$contentFile = $rootPath.'/'.$viewsFolder.'/app.dialog.siteContent.php';
+                        //$ret = [ 'siteContent' => execPHP ($contentFile) ];
                     }
-                    //$contentFile = $rootPath.'/'.$viewsFolder.'/app.dialog.siteContent.php';
-                    //$ret = [ 'siteContent' => execPHP ($contentFile) ];
                 }
             }
 

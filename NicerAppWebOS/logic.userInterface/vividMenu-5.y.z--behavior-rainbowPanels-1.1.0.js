@@ -84,7 +84,7 @@ class naVividMenu__behavior_rainbowPanels {
 
         LIs.each(function(idx,li) {
             $(li).attr('id', t.el.id+'__li__'+idx);
-            html += '<div id="'+t.el.id+'__'+idx+'" class="vividButton vividButton_text vividMenu_item backdropped contentSectionTitle3"  theme="dark" style="display:none;width:150px;border: rgba(255, 255, 255, 0.7); box-shadow: rgba(255, 255, 255, 0.4) 2px 2px 4px 4px inset, rgba(0, 0, 0, 0.55) 2px 2px 1px 1px;">'+$(li).children('a')[0].outerHTML.replace($(li).children('a')[0].innerText+'</a>', '<span class="contentSectionTitle3_span">'+$(li).children('a')[0].innerText+'</span></a>').replace('class="linkToNewPage"', 'class="linkToNewPage contentSectionTitle3_a"')+'</div>';
+            html += '<div id="'+t.el.id+'__'+idx+'" class="vividButton vividButton_text vividMenu_item backdropped"  theme="dark" style="display:none;">'+$(li).children('a')[0].outerHTML.replace($(li).children('a')[0].innerText+'</a>', '<span class="contentSectionTitle3_span">'+$(li).children('a')[0].innerText+'</span></a>').replace('class="linkToNewPage"', 'class="linkToNewPage contentSectionTitle3_a"')+'</div>';
 
             t.items[idx] = {
                 idx : idx,

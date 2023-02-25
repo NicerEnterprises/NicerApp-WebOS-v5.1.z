@@ -7,6 +7,11 @@ html, body, table, td {
     justify-content : center;
 }
 
+.vividButton[theme="dark"] {
+    border: rgba(255, 255, 255, 0.7);
+    box-shadow: rgba(255, 255, 255, 0.4) 2px 2px 4px 4px inset, rgba(0, 0, 0, 0.55) 2px 2px 1px 1px;
+}
+
 .naNoErrors {
     color : yellow;
     animation : animNaNoErrors ease 5s infinite;
@@ -705,7 +710,9 @@ h2 {
 }
 
 
-
+.contentSectionTitle1_a, .contentSectionTitle2_a, .contentSectionTitle3_a {
+    z-index : 500000;
+}
 
 
 .contentSectionTitle1 {

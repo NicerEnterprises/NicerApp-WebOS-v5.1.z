@@ -22,7 +22,7 @@
     </div>
     <div style="margin:10px;width:calc(100% - 40px)">
         <span>Hours</span><input id="backgroundChange_hours" type="number" min="0" max="23" value="0" style="width:40px;height:1em;margin-left:15px" onchange="na.site.saveTheme()"></input>
-        <span style="margin-left:10px;">Minutes</span><input id="backgroundChange_minutes" type="number" min="5" max="59" value="5" style="width:40px;height:1em;margin-left:15px" onchange="na.site.saveTheme()"></input>
+        <span style="margin-left:10px;">Minutes</span><input id="backgroundChange_minutes" type="number" min="1" max="59" value="5" style="width:40px;height:1em;margin-left:15px" onchange="na.site.saveTheme()"></input>
     </div>
 </div>
 
