@@ -1,7 +1,6 @@
 .newsApp_header {
-    font-size : 18px;
     color : white;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255,1), 2px 2px 2px rgba(0,0,0,1);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
 }
 
 #newsApp_content {

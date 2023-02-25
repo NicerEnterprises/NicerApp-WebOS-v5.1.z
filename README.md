@@ -98,9 +98,6 @@ curl http://admin:xcsd708KLJAPWUINZNASP0124kz8zlk3wjkajJKO2309z5230a9JAhziIALQAO
 
 SQL : https://adodb.org
 
-# Installing the Princeton Wordnet 3.0 files
-see https://wordnet.princeton.edu/download/current-version and install it into .../NicerAppWebOS/3rd-party/Princeton_wordNet_3.0
-
 
 # Adding background image files
 The backgrounds are stored under 
@@ -260,6 +257,14 @@ After that, the only remaining step is to restart all the server software :
 > sudo service apache2 restart
 > 
 > sudo service nginx restart
+
+# Initializing a couchdb database
+
+You'll have to edit .../NicerAppWebOS/domainConfigs/YOURDOMAIN_TLD/naLAN.json
+to enter your local area network's outside-world IP address.
+
+After this, you'll have to browse once to https://YOURDOMAIN.TLD/NicerAppWebOS/db_init.php
+and after that to https://YOURDOMAIN.TLD
 	
 # Modifying the HTML for a nicerapp site
 This is done by modifying .../NicerAppWebOS/domainConfigs/YOURDOMAIN_TLD/index.template.php
