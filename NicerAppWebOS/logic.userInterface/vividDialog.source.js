@@ -1,5 +1,8 @@
 class naVividDialog {
     constructor(el,html,parent) {
+        if ($('.vdSettings',el)[0]) return false;
+
+
         var t = this;
         t.p = parent;
         if (typeof html=='string' && html!=='') {

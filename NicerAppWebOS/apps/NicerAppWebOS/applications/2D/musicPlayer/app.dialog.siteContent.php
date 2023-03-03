@@ -97,8 +97,8 @@ $spacer = "\n\t\t\t\t";
 	
 	<div id="titlebar" class="vividDialog" style="opacity:0.0001;position:absolute;display:flex;background:rgba(0,0,0,0.4);border:1px solid white;border-radius:15px;font-weight:bold;justify-content:center;vertical-align:middle;align-content: center;align-items : center;padding:5px;margin-bottom:10px;">
         <div class="vividDialogContent" style="text-align:center;margin:2px;">
-        <span id="folderName"><?php echo str_replace('_', ' ', $view['set']) ?></span>&nbsp;
-        on&nbsp;<a href="/music">https://nicer.app/music</a>.
+        <span class="contentSectionTitle1_span" id="folderName"><?php echo str_replace('_', ' ', $view['set']) ?></span>&nbsp;
+        on&nbsp;<a href="/music"><span class="contentSectionTitle3_span">https://nicer.app/music</span></a>.
         </div>
     </div>
 
@@ -173,9 +173,9 @@ $spacer = "\n\t\t\t\t";
 		</div>
 	</div>
 
-	<div id="playlist_wrapper" class="vividDialog vividScrollpane" theme="dark" style="text-align:center;opacity:0.001;overflow-y:auto;overflow-x:hidden;position:absolute; width:300px;height:300px;">
-        <h2 style="padding:0px !important; display:flex;justify-content:center;align-items:center;height:50px;font-size:10px;background:rgba(0,0,255,0.25);color:white;border-radius:10px;box-shadow:2px 2px 3px 2px rgba(0,0,0,0.7);">Playlist<br/>(drag and drop items onto this window)</h2>
-		<ul id="playlist" style="width:100%;height:100%;"></ul>
+	<div id="playlist_wrapper" class="vividDialog" theme="dark" style="text-align:center;opacity:0.001;overflow-y:auto;overflow-x:hidden;position:absolute; width:300px;height:300px;">
+        <h2 style="padding:0px !important; margin:20px !important;display:flex;justify-content:center;align-items:center;width:calc(100% - 40px);height:50px;font-size:10px;background:rgba(0,0,255,0.25);color:white;border-radius:10px;box-shadow:2px 2px 3px 2px rgba(0,0,0,0.7);">Playlist<br/>(drag and drop items onto this window)</h2>
+		<ul id="playlist" class="vividScrollpane" style="width:100%;height:calc(100% - 50px);"></ul>
 	</div>
 	
 	<div id="infoWindow_mp3desc" class="vividDialog" theme="dark" style="opacity:0.001;overflow:visible;position:absolute;width:320px;height:300px;">

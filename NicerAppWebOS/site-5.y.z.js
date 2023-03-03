@@ -1608,7 +1608,7 @@ na.site = {
             }
 
             //debugger;
-            if (called === 0 && !ec.called) {
+            if (called === 0 && ec && !ec.called) {
                 ec.called = true;
                 cb();
             }
@@ -2865,7 +2865,7 @@ na.site = {
                 backgroundChange_hours : $('#backgroundChange_hours').val(),
                 backgroundChange_minutes : $('#backgroundChange_minutes').val(),
                 menusFadingSpeed : $('#menusFadingSpeed').val(),
-                menusUseRainbowPanels : $('#menusUseRainbowPanels')[0] ? $('#menusUseRainbowPanels')[0].checked : false,
+                menusUseRainbowPanels : $('#menusUseRainbowPanels')[0].checked ? 'true' : 'false',
                 dialogs : {},
                 apps : tApp,
                 view : na.site.settings.current.app,

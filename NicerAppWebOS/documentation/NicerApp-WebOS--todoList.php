@@ -19,10 +19,14 @@
 
     <li class="todoList releaseDate"><div>(DONE) (2022 Nov 7th) : the emerging of <a href="https://said.by" class="noPushState noVividText" target="saidDotBy" style="margin:0 !important;">https://said.by</a> as an online blogging platform for end-users</a>.</li>
 
-    <li class="todoList releaseDate"><div>(2023-Feb or -March) Release version 5.1.2 : Fixes for the remaining CMS bugs, the page switching bugs and any other bugs.
+    <li class="todoList releaseDate"><div>(DONE) (2023 Feb 28th) Release <a href="https://github.com/NicerEnterprises/NicerApp-WebOS" class="noPushState" target="ghNA">version 5.1.3</a> : Fixes for the remaining CMS bugs, the page switching bugs and any other bugs.
     </div></li>
 
-    <li class="todoList"><div>(2023-2024) Version 5.2 : The rest of the items below here will be created in a seperate copy of the code, as version 5.2.0, that will run on my localhost server, shielded from the public internet, before getting copied into the live servers at https://nicer.app and https://said.by.
+    <li class="todoList"><div>(2023) Write a users and groups editor dialog</div></li>
+
+    <li class="todoList"><div>(2023) Upgrade the theme editor to allow users to specify which theme a new end-user should initially see for a page managed by them on a NicerApp domain</div></li>
+
+    <li class="todoList"><div>(2023-2024) The rest of the items below here will be created in a seperate copy of the code, as version 5.2.0, that will run on my localhost server, shielded from the public internet, before getting copied into the live servers at https://nicer.app and https://said.by.
         <ol class="todoList_l1">
             <li class="todoList_l1"><div>Rewrite the page loading
             </div></li>

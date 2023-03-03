@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     <div id="siteDateTime" class="vividDialog"><div class="vividDialogContent vividScrollpane"></div></div>
     
-    <div id="siteContent" class="vividDialog">
+    <div id="siteContent" class="vividDialog" rounding-test-case="M0 0 L 100 0 L100 100 L 0 100 Z">
     <div class="vividDialogContent vividScrollpane" tabindex="1">
 {$div_siteContent}    
     </div>

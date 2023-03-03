@@ -28,6 +28,13 @@ html, body, table, td {
     }
 }
 
+/* musicPlayer */
+#player::before, #infoWindow_mp3desc::before, #playlist_wrapper::before {
+    -webkit-mask-image: url(/NicerAppWebOS/siteMedia/vividDialog_borderMask_300x500.png);
+    mask-image: url(/NicerAppWebOS/siteMedia/vividDialog_borderMask_300x500.png);
+}
+/* end musicPlayer */
+
 #pageTitle span {
     font-size : 150%;
     font-family : Krona One;
@@ -231,21 +238,6 @@ html, body, table, td {
     font-weight : bold;
 }
 
-
-#siteStatusbar .vdBackground {
-    content : "";
-    /*background : url('/NicerAppWebOS/siteMedia/backgrounds/tiled/green/cloth 003C.png') repeat;
-    border-radius : 15px;
-    opacity : 0.7;*/
-    z-index : -1;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-}
-
-
 a {
     color : rgba(100,100,255,1);
     text-decoration : none;
@@ -261,10 +253,12 @@ a:hover {
 h1, h2, h3 {
     padding-top : 5px;
     padding-bottom : 5px;
-    margin-top : 10px;
-    margin-bottom : 10px;
+    margin-top : 20px;
+    margin-bottom : 20px;
 }
-span, h1, h2, h3 {
+a, p, span, h1, h2, h3 {
+    width : fit-content;
+    display : content;
     /*display : inline;*/
 }
 li > div > div:not(.jstree-wholerow), li > div:not(.jstree-wholerow, .contentSectionTitle1, .contentSectionTitle2, .contentSectionTitle3), li > span:not(.vt), .backdropped {
@@ -277,14 +271,19 @@ li > div > div:not(.jstree-wholerow), li > div:not(.jstree-wholerow, .contentSec
     padding-right : 14px;
     box-shadow : inset 0px 0px 8px 5px rgba(0,0,0, 0.8), 0px 0px 4px 2px rgba(200,255,200,0.7), 4px 4px 8px 4px rgba(0,0,0,0.7);
 }
-p {
+.vividButton > a, .newsApp__item__outer a {
+    box-shadow : none;
+    margin : 0px;
+}
+.newsApp__item__outer a {
+    padding : 0px;
+}
+p, a, h1, h2, h3 {
     padding-top : 7px;
     padding-bottom : 7px;
     padding-left : 14px;
     padding-right : 14px;
-    margin-left : 30px;
-    margin-right : 10px;
-    box-shadow : 0px 0px 4px 2px rgba(0,0,0, 0.50), inset 0px 0px 6px 3px rgba(0,0,0,0.7);
+    /*box-shadow : 0px 0px 4px 2px rgba(0,0,0, 0.50), inset 0px 0px 6px 3px rgba(0,0,0,0.7);*/
 }
 span:before, h1:before, h2:before, h3:before {
     content : %20%20;
@@ -665,7 +664,7 @@ h2 {
   --color-one-orangeYellow: orange;
   --color-two-orangeYellow: yellow;
   background: linear-gradient(
-                90deg,
+                315deg,
                 var(--color-one-orangeYellow),
                 var(--color-two-orangeYellow),
                 var(--color-one-orangeYellow)
@@ -681,7 +680,7 @@ h2 {
   --color-one-blue: #005050;
   --color-two-blue: #00AAAA;
   background: linear-gradient(
-                90deg,
+                315deg,
                 var(--color-one-blue),
                 var(--color-two-blue),
                 var(--color-one-blue)
@@ -697,7 +696,7 @@ h2 {
   --color-one-green : lime;
   --color-two-green : cyan;
   background: linear-gradient(
-                45deg,
+                315deg,
                 var(--color-one-green),
                 var(--color-two-green),
                 var(--color-one-green)
@@ -736,3 +735,118 @@ h2 {
     border-radius : 8px;
     box-shadow : inset 0px 0px 8px 5px rgba(0,0,0, 0.8), 4px 4px 8px 4px rgba(0,0,0,0.7);
 }
+
+
+
+
+
+
+    .vividDialog {
+        overflow : visible;
+        border : 3px solid rgba(220,220,255,0.75);
+
+        border-radius : 20px;
+
+        box-shadow : 2px 2px 4px 4px rgba(0,0,0,0.55);
+    }
+
+    .vividDialog.vividTheme_dutchFlag::before {
+        background : linear-gradient(180deg,
+            rgba(255,0,0,0.6) 0%,
+            rgba(255,255,255,0.66) 8%,
+            rgba(255,255,255,0.77) 12%,
+            rgba(0,0,150,0.543) 40%,
+            rgba(0,0,150,0.543) 60%,
+            rgba(255,255,255,0.77) 88%,
+            rgba(255,255,255,0.66) 92%,
+            rgba(255,0,0,0.6) 100%
+        );
+    }
+
+    .vividDialog::before {
+        content : '';
+        overflow : visible;
+        background : linear-gradient(180deg,
+            rgba(255,255,255,0.55) 0%,
+            rgba(0,0,150,0.55) 50%,
+            rgba(255,255,255,0.55) 100%
+
+        );
+        z-index: -1;
+        -webkit-mask-image: url(/NicerAppWebOS/siteMedia/vividDialog_borderMask_3840x2160.png);
+        mask-image: url(/NicerAppWebOS/siteMedia/vividDialog_borderMask_3840x2160.png);
+        -webkit-mask-size: 100% 100%, contain;
+        -webkit-mask-repeat : no-repeat;
+        border-radius : 16px;
+        position : absolute;
+        top:0px;
+        left:0px;
+        width : 100%;
+        height : 100%;
+    }
+    .vividDialog > .vdBackground {
+        border-radius : 16px;
+        position:absolute;
+        top : 8px;
+        left : 8px;
+        width : calc(100% - 16px);
+        height : calc(100% - 16px);
+        box-shadow : inset 0px 0px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    #siteStatusbar::before, #titlebar::before {
+        -webkit-mask-image: url(/NicerAppWebOS/siteMedia/vividDialog_borderMask_3840x100.png);
+        mask-image: url(/NicerAppWebOS/siteMedia/vividDialog_borderMask_3840x100.png);
+    }
+    #siteToolbarRight::before {
+        -webkit-mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_300x120.png");
+        mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_500x1000.png");
+    }
+
+
+    #mp3s {
+        overflow-x : none;
+    }
+
+    #player::before {
+        -webkit-mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_300x120.png");
+        mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_500x1000.png");
+    }
+    #player .vdBackground {
+    }
+
+    #infoWindow_mp3desc::before {
+        -webkit-mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_300x500.png");
+        mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_500x1000.png");
+    }
+    #infoWindow_mp3desc .vdBackground {
+    }
+
+    #playlist_wrapper::before {
+        -webkit-mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_300x500.png");
+        mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_500x1000.png");
+    }
+    #playlist_wrapper .vdBackground {
+
+    }
+
+
+    @container musicPlayerDialog {
+        .vividDialog::before {
+            -webkit-mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_500x1000.png");
+            mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_500x1000.png");
+        }
+    }
+
+    @media(max-width: 1930px) {
+        .vividDialog::before {
+            -webkit-mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_1920x1080.png");
+            mask-image: url("/NicerAppWebOS/siteMedia/vividDialog_borderMask_1920x1080.png");
+        }
+    }
+    @media(max-width: 3850px) {
+        .vividDialog::before {
+            -webkit-mask-image: url(/NicerAppWebOS/siteMedia/vividDialog_borderMask_3840x2160.png);
+            mask-image: url(/NicerAppWebOS/siteMedia/vividDialog_borderMask_3840x2160.png);
+        }
+    }

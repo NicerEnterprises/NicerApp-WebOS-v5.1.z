@@ -56,7 +56,7 @@ require_once (realpath(dirname(__FILE__).'/../../../../../../../..').'/NicerAppW
 	<script type="text/javascript">
 //		jQuery(document).ready(function() {
 			//debugger;
-            na.analytics.logMetaEvent ('tarot : init-stage-0');
+            //na.analytics.logMetaEvent ('tarot : init-stage-0');
 
 			delete na.apps.loaded['app.2D.cardgame.tarot'];
 			na.m.waitForCondition (

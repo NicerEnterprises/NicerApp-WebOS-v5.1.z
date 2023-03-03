@@ -83,7 +83,7 @@ na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot
                     // never put any asynchronous calls in an ondestroy handler, except for this statement here :
                     // as this can mess up na.s.c.loadContent()'s work.
                     setTimeout (function() {
-                        //delete na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot'];
+                        delete na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot'];
                     }, 10);
                 },
 				onresize : function (settings) {

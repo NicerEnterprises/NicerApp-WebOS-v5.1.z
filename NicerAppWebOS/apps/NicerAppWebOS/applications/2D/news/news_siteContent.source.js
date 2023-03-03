@@ -55,7 +55,8 @@ na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/news'] = {
                         $('#siteContent__header').fadeIn('normal', function () {
                             $('#siteContent__header').css({display:'flex'});
                         });
-                        
+
+
                         na.m.waitForCondition('news app : siteContent dialog reappearance', function () {
                             return (
                                 /*$('#jsPageSpecific').length > 0
@@ -111,7 +112,6 @@ na.m.preventScreenLock();
 				onresize : function (settings) {
 					// TODO : what's settings.isManualResize ???
 					//if ($('#appGame').css('display')=='none') $('#appGame').fadeIn('slow');
-                    alert (3);
 					na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/news'].onresize(settings);
                     if (typeof settings=='object' && typeof settings.callback=='function')
                         settings.callback (settings.callbackParams[0], settings.callbackParams[1]);
@@ -351,10 +351,10 @@ na.m.preventScreenLock();
                         background : 'rgba(0,0,0,0)'
                     });
                     $('#siteContent__content').css({
-                        top : $('#siteContent__header').height(),
-                        left : 0,
-                        width : $('#siteContent').width(),
-                        height : $('#siteContent').height() - $('#siteContent__header').height(),
+                        top : $('#siteContent__header').height() + 10,
+                        left : 10,
+                        width : $('#siteContent').width() - 20,
+                        height : $('#siteContent').height() - $('#siteContent__header').height() - 20,
                         opacity : 1
                     });
 
@@ -690,10 +690,10 @@ na.m.preventScreenLock();
                         background : 'rgba(0,0,0,0)'
                     });
                     $('#siteContent__content').css({
-                        top : $('#siteContent__header').height(),
-                        left : 0,
-                        width : $('#siteContent').width(),
-                        height : $('#siteContent').height() - $('#siteContent__header').height(),
+                        top : $('#siteContent__header').height() + 10,
+                        left : 10,
+                        width : $('#siteContent').width() - 20,
+                        height : $('#siteContent').height() - $('#siteContent__header').height() - 20,
                         opacity : 1
                     });
 
@@ -1620,8 +1620,13 @@ na.m.preventScreenLock();
         } else {
             var seov = appSettings.section.replace(/.*__/,'').replace('__','-').replace('_','-').toLowerCase();
         };
-        html += '<div class="newsApp__item__footer"><span class="newsApp__item__date"><a class="nomod" target="newsAppItem_'+it.idx+'" href="' + it.u+'">' + na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/news'].formatDate(it)+'</a></span><br/>';
-        html += '<span class="newsApp__item__copy"><a class="nomod" href="javascript:var el = $(\'#newsApp__item__'+it.idx+'\')[0], textarea = $(\'#siteContent__textareaCopy\')[0]; if (!textarea) { var el2=document.createElement(\'textarea\'); window.top.document.append(el2); textarea=el2 }; el_html = el.innerHTML; debugger; el.innerHTML = el.innerHTML.replace(\/<span class..newsApp__item__copy.>.*<.a><.span>\/,\'\') + \'Found via <a href=\\\'https://nicer.app/'+seov+'\\\' target=\\\'_new\\\'>https://nicer.app/'+seov+'</a>\'; var selection = window.getSelection(); var range = document.createRange(); range.selectNodeContents(el); selection.removeAllRanges(); selection.addRange(range); window.top.document.execCommand(\'copy\');setTimeout(function(){selection.removeAllRanges(); el.innerHTML=el_html;},1000);">Copy to clipboard</a></span></div> ';
+        html += '<div class="newsApp__item__footer">';
+        html += '<span class="newsApp__item__copy">';
+            html += '<a class="nomod noPushState" target="_new" href="javascript:var el = $(\'#newsApp__item__'+it.idx+'\')[0], textarea = $(\'#siteContent__textareaCopy\')[0]; if (!textarea) { var el2=document.createElement(\'textarea\'); window.top.document.append(el2); textarea=el2 }; el_html = el.innerHTML; debugger; el.innerHTML = el.innerHTML.replace(\/<span class..newsApp__item__copy.>.*<.a><.span>\/,\'\') + \'Found via <a href=\\\'https://nicer.app/'+seov+'\\\' target=\\\'_new\\\'>https://nicer.app/'+seov+'</a>\'; var selection = window.getSelection(); var range = document.createRange(); range.selectNodeContents(el); selection.removeAllRanges(); selection.addRange(range); window.top.document.execCommand(\'copy\');setTimeout(function(){selection.removeAllRanges(); el.innerHTML=el_html;},1000);">';
+                html+= '<span class="newsApp__item__category"><span class="newsApp__item__categoryTitle">Category</span> <span class="newsApp__item__categoryColon">:</span> <span class="newsApp__item__categoryValue">'+it.path.substr(0, it.path.length)+'</span></span><br/>';
+                html += '<span class="newsApp__item__date">' + na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/news'].formatDate(it)+'</span><br/>';
+            html += 'Copy to clipboard</a></span>';
+        html +='</span> ';
         html+= '</div>';
          
         // tooltipster HTML
@@ -1865,7 +1870,7 @@ na.m.preventScreenLock();
         tApp.delayNewItemsMin = $('#delayNewItemsMin').val();
         tApp.delayNewItemsMax = $('#delayNewItemsMax').val();
         na.site.saveTheme();
-        na.site.themeAppsChanged();
+        na1.themeAppsChanged();
     },
     
     themeAppsChanged : function () {
@@ -1967,7 +1972,7 @@ na.m.preventScreenLock();
                 width : ow
             });
             $('#newsApp_content_shadow, #newsApp_content, #siteContent__content').css({
-                height : oh - $('#siteContent__header').height(),
+                height : oh - $('#siteContent__header').height() - 20,
                 width : ow
             });
             na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/news'].settings.itemWidth = w;

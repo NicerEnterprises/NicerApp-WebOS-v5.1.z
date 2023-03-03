@@ -328,12 +328,13 @@ img.bg_last {
 }
 .vividDialogContent {
     overflow : auto;
-    margin : 10px;
+    margin : 20px;
     display : none;
     width : calc(100% - 20px);
     height : calc(100% - 20px);
     z-index : 1100;
     text-shadow : 2px 2px 1px rgba(0,0,0,0.7);
+    border : none;
     /*opacity : 0.0001;*/
 
 }

@@ -533,7 +533,7 @@ class NicerAppWebOS {
 
             // fetch dataRecord
             $findCommand = [
-                'selector' => [ 'user' => $username, 'dataID' => $dataID ],
+                'selector' => [ 'user' => $username, 'SEO_value' => $dataID ],
                 'use_index' => 'primaryIndex',
                 'fields' => ['_id']
             ];
@@ -1114,6 +1114,7 @@ class NicerAppWebOS {
                 //echo '<pre style="color:green">'; var_dump ($_GET); echo '</pre>'; die();
 
                 foreach ($css as $themeName => $theme) { break; };
+                //echo '<pre style="color:green">'; var_dump ($css); echo '</pre>'; die();
                 $r .= 'na.site.globals = $.extend(na.site.globals, {'.PHP_EOL;
                     //$r .= "\tdebug : ".json_encode($dbg).",".PHP_EOL;
                     $r .= "\tuseVividTexts : ".$useVividTexts.",".PHP_EOL;

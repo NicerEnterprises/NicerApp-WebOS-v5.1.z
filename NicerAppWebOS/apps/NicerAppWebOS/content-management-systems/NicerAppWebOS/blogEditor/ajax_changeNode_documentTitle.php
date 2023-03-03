@@ -2,7 +2,8 @@
 require_once (realpath(dirname(__FILE__).'/../../../../..').'/boot.php');
 $debug = false;
 global $naWebOS;
-$cdb = $naWebOS->dbs->findConnection('couchdb')->cdb;
+$db = $naWebOS->dbs->findConnection('couchdb');
+$cdb = $db->cdb;
 
 $cdb->setDatabase($_POST['database'],false);
 $call = $cdb->get ($_POST['id']);
@@ -25,7 +26,7 @@ $cdb->setDatabase ($dataSetName, false);
 
 $findCommand = [
     'selector' => [
-        'dataID' => $_GET['dataID']
+        'dataID' => $_REQUEST['dataID']
     ],
     'use_index' => 'index_dataID',
     'fields' => [ '_id' ]
@@ -52,7 +53,7 @@ if (
         //var_dump ($call->body->docs); //die();
         $call2 = $cdb->get ($call->body->docs[0]->_id);
         //var_dump ($call2->body); //die();
-        $call2->body->SEO_value = $_POST['seoValue'];
+        $call2->body->SEO_value = $_REQUEST['seoValue'];
         /*
         //var_dump ($call2->body); //die();
         $r = null;

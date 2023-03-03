@@ -635,6 +635,7 @@ na.apps.loaded['applications/content-management-systems/NicerAppWebOS/blogEditor
             data : {
                 database : sel.original.database,
                 id : sel.original.id,
+                dataID : sel.original.dataID,
                 text : $('#documentTitle').val(),
                 seoValue : $('#seo_value').val()
             },
@@ -659,6 +660,7 @@ na.apps.loaded['applications/content-management-systems/NicerAppWebOS/blogEditor
             data : {
                 database : sel.original.database,
                 id : sel.original.id,
+                dataID : sel.original.dataID,
                 text : $('#documentTitle').val(),
                 seoValue : $('#seo_value').val()
             },

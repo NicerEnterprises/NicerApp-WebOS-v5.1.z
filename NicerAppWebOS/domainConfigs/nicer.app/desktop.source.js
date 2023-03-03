@@ -86,7 +86,7 @@ na.desktop = {
                 opacity : 0.0001
             }
         },                
-        margin : 7
+        margin : 14
     },
     settings : {
         animating : true,
@@ -430,7 +430,7 @@ na.desktop = {
                                 { element : 'body', edge : 'bottom' }
                             ],
                             growTo : 'maxX',
-                            yMinTop : ( na.desktop.settings.showVideoBackgroundControls ? 100 : 0 )
+                            yMinTop : ( na.desktop.settings.showVideoBackgroundControls ? 200 : 0 )
                         }
                     }
                     : {}
@@ -1220,6 +1220,9 @@ na.desktop = {
 
     masterCallback_do : function (div, calculationResults, sectionIdx, section, divOrderIdx) {
         na.m.log (15, 'na.desktop.masterCallback_do (divID='+div.id+')',false);
+
+        na.site.resizeApps();
+
         for (var i=0; i < na.d.s.masterCallbacks.length; i++) {
             var cf = na.d.s.masterCallbacks[i];
             if (!cf) debugger;

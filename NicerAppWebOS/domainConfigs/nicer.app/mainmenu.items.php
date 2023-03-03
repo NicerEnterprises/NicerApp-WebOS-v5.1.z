@@ -216,6 +216,22 @@
             ]
         ],
 
+        "music_index__2018_Tropical_Deep_House" => [
+            'apps-current' => [
+                'NicerApp-WebOS__pageSettings' => [
+                    "misc" => [
+                       'folder' => '/NicerAppWebOS/apps/NicerAppWebOS/applications/2D'
+                    ],
+                    "apps" => [
+                        'musicPlayer' => [
+                            'set' => '2018 Tropical Deep House',
+                            'SEO_value' => 'music2018--categoryName-tropicalDeepHouse'
+                        ]
+                     ]
+                ]
+            ]
+        ],
+
         "music_index__Beautiful_Chill_Mixes" => [
             'apps-current' => [
                 'NicerApp-WebOS__pageSettings' => [

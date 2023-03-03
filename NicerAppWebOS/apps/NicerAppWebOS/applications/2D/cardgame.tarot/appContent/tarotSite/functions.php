@@ -53,7 +53,7 @@ function t2_getSiteRootURL() {
 			return '//NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot/';
 	}
 	*/
-	return '/apps/NicerAppWebOS//NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot/appContent/tarotSite/';
+	return '/apps/NicerAppWebOS/applications/2D/cardgame.tarot/appContent/tarotSite/';
 }
 
 function t2_getDecksRootURL() {
@@ -258,7 +258,7 @@ function t2_html_menu_decks_recurse ($d) {
 					);
 				}
                 $hrefJSON = '{"/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot":'.json_encode($viewSettings,true).'}';
-                $href = '/apps/'.base64_encode_url($hrefJSON);
+                $href = '/view/'.base64_encode_url($hrefJSON);
                 $n = str_replace ('(','',$n);
                 $n = str_replace (')','',$n);
 				$html.='<li><a class="appMenu selectDeck" href="'.$href.'">'.$n.'</a></li>';
@@ -303,7 +303,7 @@ function t2_html_menu_readings() {
                 //var_dump ($naWebOS->view);
                 //var_dump ($viewSettings); exit();
                 $hrefJSON = '{"/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/cardgame.tarot":'.json_encode($viewSettings,true).'}';
-                $href = '/apps/'.base64_encode_url($hrefJSON);
+                $href = '/view/'.base64_encode_url($hrefJSON);
 		$html .= '<li><a class="appMenu selectReading" href="'.$href.'">'.$r.'</a></li>'."\n";
 	}
 	return $html;

@@ -818,7 +818,7 @@ export class na3D_fileBrowser {
                     + ( (p.upDown *  (it.row-1) * offsetXY))
                     + ( p.upDown * t.items[it.parent].rowOffsetValue * 200 )
                 );
-                it.model.position.z = -1 * ((it.level+1) * 250 );
+                it.model.position.z = -1 * ((it.level+1) * 500 );
                 
                 var x = it.data.it;
                 //debugger;
@@ -1308,7 +1308,7 @@ export class na3D_fileBrowser {
             //psi = !psi ? Math.round(Math.random() * (ps.length + 1)) : psi,
             pidx = ps[ps.length-1],
             itaParent = null,
-            offset = 100;//t.items[pidx];
+            offset = 55;//t.items[pidx];
 
             if (itaParent) {
                 ita1.xOffset = itaParent.leftRight * offset;

@@ -152,7 +152,7 @@ na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer'] 
 				var html = '';
                 html += '<div style="height:15px;">&nbsp;</div>';
                 html += '<table>';
-				html += '<tr><td colspan="2" style="text-align:center"><a href="' + na.site.globals.url + '/download_mp3.php?file='+file+'">download</a></td></tr>';
+				html += '<tr><td colspan="2" style="text-align:center"><a href="' + na.site.globals.url + '/download_mp3.php?file='+file.replace('#','%23').replace('&','%26')+'">download</a></td></tr>';
 				html += '<tr><td><span class="mp3_info_label mp3_title_label">title</span></td><td><span class="mp3_title">'+file+'</span></td></tr>';
                 html += '</table>';
                 na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer'].updateDescriptionDiv(id, file, html);
@@ -210,7 +210,7 @@ na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer'] 
 
             
             var 
-            mp3 = '/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer/music/'+na.site.globals.app['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer']['set']+'/' + file;
+            mp3 = '/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer/music/'+na.site.globals.app['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer']['set']+'/' + file.replace('#','%23').replace('&','%26');
 
             $('#audioTag')[0].src = mp3;
             $('#audioTag')[0].play();
@@ -547,7 +547,7 @@ na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer'] 
         $('#titlebar').css ({
             width : contentInnerWidth,
             left : dialogsLeft,
-            top : 27
+            top : 45
         });
         $('#titlebar .vividDialogContent').css ({
             overflow : 'hidden'
@@ -566,16 +566,16 @@ na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer'] 
 		dialogsHeight = (myHeight - dialogsTop - 40);
         
 		$('#horizontalMover__containmentBox2').css({
-			left : 15,
-            top : 5,
-			width : myWidth-30,
+			left : 25,
+            top : 20,
+			width : myWidth-50,
 			opacity : 0.001,
 			display : 'block'
 		}).animate ({opacity:0.1},1000);
 		$('#horizontalMover__containmentBox1').css({
-			left : 15,
-            top : 5,
-			width : myWidth - 30,
+			left : 25,
+            top : 20,
+			width : myWidth - 50,
 			opacity : 0.001,
 			display : 'block'
 		}).animate ({opacity:0.3},1300);
@@ -603,7 +603,7 @@ na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer'] 
             width : 300,
             height : (myHeight - 40 - 120) /2
         });
-        $('#mp3descText').css({ marginLeft : 40 });
+        $('#mp3descText').css({ marginLeft : 25 });
         
         
         $('#infoWindow_mp3desc > table').css({
@@ -613,7 +613,7 @@ na.apps.loaded['/NicerAppWebOS/apps/NicerAppWebOS/applications/2D/musicPlayer'] 
 	 
         $('#horizontalMover').css({
 			left : masterLeftOffset,
-            top : 7
+            top : 22
 		});
 
 

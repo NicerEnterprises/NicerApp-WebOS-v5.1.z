@@ -78,7 +78,7 @@ if ($callOK) {
             $hasRecord = true;
             $call2 = $cdb->get($d->_id);
             $rets = array_merge ($rets, [
-                $idx.'__'.$call2->body->theme => json_decode(json_encode($call2->body),true)
+                /*$idx.'__'.*/$call2->body->theme => json_decode(json_encode($call2->body),true)
             ]);
 
             //echo json_encode($call2->body, JSON_PRETTY_PRINT);//.'<br/>'.PHP_EOL;
@@ -112,7 +112,7 @@ if ($callOK) {
                     $hasRecord = true;
                     $call2 = $cdb->get($d->_id);
                     $rets = array_merge ($rets, [
-                        $idx.'__'.$call2->body->theme => json_decode(json_encode($call2->body),true)
+                        /*$idx.'__'.*/$call2->body->theme => json_decode(json_encode($call2->body),true)
                     ]);
 
                     //echo json_encode($call2->body, JSON_PRETTY_PRINT);//.'<br/>'.PHP_EOL;

@@ -61,12 +61,12 @@ $pageTitle = str_replace('_', '&nbsp;', $pageTitle);
                     <div class="content_containerDiv_item" style="order:3;">
                         <span id="newsApp_timer" class="backdropped newsApp_header" style="font-weight:bold;"></span>                    
                     </div>
-                    <div class="content_containerDiv_item" style="order:4;justify-content:flex-end;">
+                    <div class="content_containerDiv_item" style="order:4;justify-content:flex-center;">
                         <div class="navbar" style="width:100%">
 <?php
 global $naWebOS;
 echo $naWebOS->html_vividButton (
-    7, 'width:100%;margin:5px;align-items:center;',
+    7, 'width:100%;',
 
     'newsApp_options',
     'vividButton_icon_50x50 grouped btnOptions', '_50x50', 'grouped',
@@ -87,7 +87,7 @@ echo $naWebOS->html_vividButton (
     null, null, null
 );
 echo $naWebOS->html_vividButton (
-    7, 'width:100%;margin:5px;align-items:center;',
+    7, 'width:100%;',
     
     'newsApp_search', 
     'vividButton_icon_50x50 grouped btnDelete forum', '_50x50', 'grouped',
@@ -108,7 +108,7 @@ echo $naWebOS->html_vividButton (
     null, null, null
 );
 echo $naWebOS->html_vividButton (
-    7, 'width:100%;margin:5px;align-items:center;',
+    7, 'width:100%;',
     
     'newsApp_lock', 
     'vividButton_icon_50x50 grouped btnDelete forum', '_50x50', 'grouped',
@@ -129,7 +129,7 @@ echo $naWebOS->html_vividButton (
     null, null, null
 );
 echo $naWebOS->html_vividButton (
-    7, 'width:100%;margin:5px;align-items:center;',
+    7, 'width:100%;',
     
     'newsApp_next', 
     'vividButton_icon_50x50 grouped btnDelete forum', '_50x50', 'grouped',

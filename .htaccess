@@ -459,6 +459,19 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_METHOD} ^(GET)$
 RewriteCond %{HTTP:X-Requested-With} XMLHttpRequest
+RewriteRule ^music2018--categoryName-tropicalDeepHouse$ /view-content/eyJcL05pY2VyQXBwV2ViT1NcL2FwcHNcL05pY2VyQXBwV2ViT1NcL2FwcGxpY2F0aW9uc1wvMkRcL211c2ljUGxheWVyIjp7InNldCI6IjIwMTggVHJvcGljYWwgRGVlcCBIb3VzZSIsIlNFT192YWx1ZSI6Im11c2ljMjAxOC0tY2F0ZWdvcnlOYW1lLXRyb3BpY2FsRGVlcEhvdXNlIn19 [N]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_METHOD} ^(GET)$
+RewriteRule ^music2018--categoryName-tropicalDeepHouse$ /view/eyJcL05pY2VyQXBwV2ViT1NcL2FwcHNcL05pY2VyQXBwV2ViT1NcL2FwcGxpY2F0aW9uc1wvMkRcL211c2ljUGxheWVyIjp7InNldCI6IjIwMTggVHJvcGljYWwgRGVlcCBIb3VzZSIsIlNFT192YWx1ZSI6Im11c2ljMjAxOC0tY2F0ZWdvcnlOYW1lLXRyb3BpY2FsRGVlcEhvdXNlIn19 [N]
+
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_METHOD} ^(GET)$
+RewriteCond %{HTTP:X-Requested-With} XMLHttpRequest
 RewriteRule ^music2020--categoryName-beautifulChillMixes$ /view-content/eyJcL05pY2VyQXBwV2ViT1NcL2FwcHNcL05pY2VyQXBwV2ViT1NcL2FwcGxpY2F0aW9uc1wvMkRcL211c2ljUGxheWVyIjp7InNldCI6IkJlYXV0aWZ1bF9DaGlsbF9NaXhlcyIsIlNFT192YWx1ZSI6Im11c2ljMjAyMC0tY2F0ZWdvcnlOYW1lLWJlYXV0aWZ1bENoaWxsTWl4ZXMifX0 [N]
 
 RewriteCond %{REQUEST_FILENAME} !-f
